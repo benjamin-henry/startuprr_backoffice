@@ -20,7 +20,7 @@ else {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <main>
+    <main id="main">
       <section id="menu" class="bg-light">
         <nav class="container navbar navbar-expand-lg bg-transparent navbar-dark">
           <a href="#menu">
@@ -45,7 +45,7 @@ else {
       </section>
 
       <?php if ($logged_in==false){
-      
+
     }else{
       echo '
       <div id="id01" class="modal">
@@ -62,16 +62,17 @@ else {
       </div>';
     }
     ?>
+
       <section id="nav-backOffice">
         <span class="button-sidebar" style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; Back Office Panel</span>
-
       </section>
       <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a class="link-sidebar" href="#">Creer un article</a>
-          <a class="link-sidebar" href="#">Options</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Articles</a>
+        <a href="#">Options</a>
       </div>
-    </main>
+      </main>
+
 
     <script src="https://kit.fontawesome.com/6fee70888d.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
