@@ -8,8 +8,6 @@ if(!isset($_SESSION['logged_in'])) {
 else {
   $logged_in=$_SESSION['logged_in'];
 }
-
-
 ?>
 <head>
   <meta charset="utf-8">
@@ -40,45 +38,21 @@ else {
             <li class="nav-item"><a class="nav-link" href="#member">MEMBERS</a></li>
             <li class="nav-item"><a class="nav-link" href="#price">PRICE</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
-            <li class="nav-item"><a class="nav-link fas fa-search fa-flip-horizontal" href="#" style="color:#00a99d;"></a>
-
+            <li class="nav-item"><a class="nav-link fas fa-search fa-flip-horizontal" href="#" style="color:#00a99d;"></a></li>
             <?php
             if ($logged_in==false){
               echo '<button type="button" onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;color=#363636"class="btn btn-circle not-connected"><i class="fa fa-user"></i>';
             }else{
-                echo '<button type="button" onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;"class="btn btn-user btn-circle btn-profile connected"><i class="fa fa-user "></i>';
+                echo '<button type="button" onclick="document.getElementById(\'id01\').style.display=\'block\'" style="width:auto;"class="btn btn-user btn-circle btn-profile connected"><i class="fa fa-user"></i>';
               }
             ?>
-            </li>
           </ul>
         </div>
       </nav>
     </section>
 
     <?php if ($logged_in==false){
-    echo '
-    <div id="id01" class="modal">
-      <form class="modal-content animate" action="./login.php" method="post">
-        <div class="imgcontainer">
-          <span onclick="document.getElementById(\'id01\').style.display=\'none\'" class="close" title="Close Modal">&times;</span>
-          <img src="./img/img_avatar2.png" alt="Avatar" class="avatar">
-        </div>
-        <div class="container">
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
-          <label for="password"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="password" required>
-          <button class="button-blue-light" type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
-        </div>
-        <div class="container" style="background-color:#f1f1f1">
 
-          <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
-      </form>
-    </div>';
   }else{
     echo '
     <div id="id01" class="modal">
@@ -88,7 +62,7 @@ else {
           <img src="./img/img_avatar2.png" alt="Avatar" class="avatar">
         </div>
         <div class="container">
-          <a href=""><button class="button-blue-light">Back-Office</button></a>
+          <a href="./backOffice.php"><button class="button-blue-light">Back-Office</button></a>
           <a href="./logout.php"><button class="button-red-light">Logout</button></a>
         </div>
       </div>

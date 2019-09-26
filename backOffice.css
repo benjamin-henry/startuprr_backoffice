@@ -1,0 +1,106 @@
+
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< HEADER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+#nav-backOffice{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: black;
+}
+.nav-link-user{
+  display: block;
+  padding: 10px;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+.nav-link-user:hover {
+  background-color: black;
+}
+
+
+.nav-link-user{
+  color: white;
+  transition: all 0.3s;
+}
+.nav-link-user:hover{
+  color:  #6bfff5;
+}
+#liste-users{
+  display: flex;
+}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< SIDE BAR >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.button-sidebar{
+  padding: 6px 6px;
+  color:white;
+  transition: all 0.3s;
+}
+.button-sidebar:hover{
+  color: #6bfff5;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #212121;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.closebtn:hover{
+color: #6bfff5 !important;
+background-color: black;
+}
+.sidenav .link-sidebar {
+  padding: 8px 8px 8px 32px;
+  font-size: 25px;
+  width: 210px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+.sidenav .link-sidebar:hover {
+  background-color: black;
+  color: #6bfff5;
+}
+
+.sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 0px;
+      font-size: 36px;
+      color: white;
+      display: flex;
+      transition: 0.3s;
+      height: 35px;
+      width: 35px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
